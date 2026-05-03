@@ -1,0 +1,262 @@
+[
+  {
+    "id": "s1",
+    "text": "How clearly defined is your business's core goal for the next 12 months?",
+    "category": "strategy",
+    "type": "single",
+    "weight": 3,
+    "options": [
+      { "text": "We have a documented, specific, measurable goal", "value": "a", "score": 10 },
+      { "text": "We have a general idea but it's not written down", "value": "b", "score": 5 },
+      { "text": "We're still figuring out our direction", "value": "c", "score": 2 },
+      { "text": "We don't have a defined goal", "value": "d", "score": 0, "branchTo": "s2" }
+    ]
+  },
+  {
+    "id": "s2",
+    "text": "How well do you understand who your ideal customer is?",
+    "category": "strategy",
+    "type": "single",
+    "weight": 3,
+    "options": [
+      { "text": "Deeply — we have a documented ICP with psychographics", "value": "a", "score": 10 },
+      { "text": "Somewhat — we know the basics but lack depth", "value": "b", "score": 6 },
+      { "text": "Vaguely — we have a general audience in mind", "value": "c", "score": 3 },
+      { "text": "Not at all — we try to serve everyone", "value": "d", "score": 0 }
+    ]
+  },
+  {
+    "id": "s3",
+    "text": "How is your current revenue model structured?",
+    "category": "strategy",
+    "type": "single",
+    "weight": 2,
+    "options": [
+      { "text": "Clearly defined with multiple reliable revenue streams", "value": "a", "score": 10 },
+      { "text": "Primarily one revenue stream, working on diversifying", "value": "b", "score": 7 },
+      { "text": "Inconsistent — revenue depends on one-off projects", "value": "c", "score": 3 },
+      { "text": "We don't have a clear revenue model", "value": "d", "score": 0 }
+    ]
+  },
+  {
+    "id": "s4",
+    "text": "How do you make major business decisions?",
+    "category": "strategy",
+    "type": "single",
+    "weight": 2,
+    "options": [
+      { "text": "Data-driven with clear frameworks and KPIs", "value": "a", "score": 10 },
+      { "text": "Mix of intuition and some data", "value": "b", "score": 6 },
+      { "text": "Mostly gut feeling", "value": "c", "score": 3 },
+      { "text": "Reactively — we respond to problems as they arise", "value": "d", "score": 0 }
+    ]
+  },
+  {
+    "id": "s5",
+    "text": "How documented are your core business processes?",
+    "category": "strategy",
+    "type": "single",
+    "weight": 2,
+    "options": [
+      { "text": "Fully documented with SOPs for all key processes", "value": "a", "score": 10 },
+      { "text": "Partially documented — key processes are written down", "value": "b", "score": 6 },
+      { "text": "Minimal documentation — mostly in people's heads", "value": "c", "score": 2 },
+      { "text": "No documentation at all", "value": "d", "score": 0 }
+    ]
+  },
+  {
+    "id": "b1",
+    "text": "How would you describe your brand's visual identity?",
+    "category": "branding",
+    "type": "single",
+    "weight": 2,
+    "options": [
+      { "text": "Professional, consistent, and strategically designed", "value": "a", "score": 10 },
+      { "text": "Decent but inconsistent across channels", "value": "b", "score": 6 },
+      { "text": "DIY or outdated — needs a refresh", "value": "c", "score": 2 },
+      { "text": "We don't have a defined visual identity", "value": "d", "score": 0 }
+    ]
+  },
+  {
+    "id": "b2",
+    "text": "How clearly does your brand communicate what makes you different?",
+    "category": "branding",
+    "type": "single",
+    "weight": 3,
+    "options": [
+      { "text": "Very clearly — our USP is explicit and memorable", "value": "a", "score": 10 },
+      { "text": "Somewhat — we mention it but it doesn't stand out", "value": "b", "score": 5 },
+      { "text": "Weakly — it gets lost in generic messaging", "value": "c", "score": 2 },
+      { "text": "We haven't defined our differentiation", "value": "d", "score": 0 }
+    ]
+  },
+  {
+    "id": "b3",
+    "text": "How consistent is your brand messaging across all touchpoints?",
+    "category": "branding",
+    "type": "single",
+    "weight": 2,
+    "options": [
+      { "text": "Highly consistent — same voice, tone, and style everywhere", "value": "a", "score": 10 },
+      { "text": "Mostly consistent with occasional deviations", "value": "b", "score": 6 },
+      { "text": "Inconsistent — different depending on who creates content", "value": "c", "score": 2 },
+      { "text": "No brand guidelines exist", "value": "d", "score": 0 }
+    ]
+  },
+  {
+    "id": "b4",
+    "text": "How well does your brand resonate with your target audience?",
+    "category": "branding",
+    "type": "single",
+    "weight": 3,
+    "options": [
+      { "text": "Very well — we get regular positive feedback and referrals", "value": "a", "score": 10 },
+      { "text": "Somewhat — some people get it, others don't", "value": "b", "score": 5 },
+      { "text": "Poorly — we often have to over-explain our value", "value": "c", "score": 2 },
+      { "text": "Unknown — we haven't tested this", "value": "d", "score": 1 }
+    ]
+  },
+  {
+    "id": "m1",
+    "text": "How do you currently generate new leads?",
+    "category": "marketing",
+    "type": "single",
+    "weight": 3,
+    "options": [
+      { "text": "Multiple consistent channels with predictable lead flow", "value": "a", "score": 10 },
+      { "text": "1-2 channels that generate occasional leads", "value": "b", "score": 6 },
+      { "text": "Primarily referrals and word of mouth only", "value": "c", "score": 3 },
+      { "text": "We don't have a reliable lead generation system", "value": "d", "score": 0 }
+    ]
+  },
+  {
+    "id": "m2",
+    "text": "What is your approximate lead-to-client conversion rate?",
+    "category": "marketing",
+    "type": "single",
+    "weight": 2,
+    "options": [
+      { "text": "Above 30% — strong conversion", "value": "a", "score": 10 },
+      { "text": "15-30% — decent conversion with room to improve", "value": "b", "score": 7 },
+      { "text": "Below 15% — struggling to convert", "value": "c", "score": 3 },
+      { "text": "Unknown — we don't track this", "value": "d", "score": 0 }
+    ]
+  },
+  {
+    "id": "m3",
+    "text": "How consistently do you produce and distribute content?",
+    "category": "marketing",
+    "type": "single",
+    "weight": 2,
+    "options": [
+      { "text": "Consistently — on a defined editorial calendar", "value": "a", "score": 10 },
+      { "text": "Occasionally — when we have time", "value": "b", "score": 4 },
+      { "text": "Rarely — content is an afterthought", "value": "c", "score": 1 },
+      { "text": "Never — we produce no content", "value": "d", "score": 0 }
+    ]
+  },
+  {
+    "id": "m4",
+    "text": "How well do you track and analyze your marketing performance?",
+    "category": "marketing",
+    "type": "single",
+    "weight": 2,
+    "options": [
+      { "text": "Rigorously — with dashboards and regular review", "value": "a", "score": 10 },
+      { "text": "Partially — we check some metrics occasionally", "value": "b", "score": 5 },
+      { "text": "Minimally — we look at vanity metrics only", "value": "c", "score": 2 },
+      { "text": "Not at all — we don't track marketing data", "value": "d", "score": 0 }
+    ]
+  },
+  {
+    "id": "m5",
+    "text": "How effective is your sales funnel at moving leads to clients?",
+    "category": "marketing",
+    "type": "single",
+    "weight": 3,
+    "options": [
+      { "text": "Very effective — clear stages, automated follow-ups, high close rate", "value": "a", "score": 10 },
+      { "text": "Moderately effective — some structure but gaps exist", "value": "b", "score": 6 },
+      { "text": "Weak — leads fall through the cracks regularly", "value": "c", "score": 2 },
+      { "text": "We don't have a sales funnel", "value": "d", "score": 0 }
+    ]
+  },
+  {
+    "id": "a1",
+    "text": "How would you rate the level of documentation of your business processes?",
+    "category": "ai",
+    "type": "single",
+    "weight": 3,
+    "options": [
+      { "text": "Excellent — everything is documented and up to date", "value": "a", "score": 10 },
+      { "text": "Good — most things documented, some gaps", "value": "b", "score": 7 },
+      { "text": "Poor — some documentation but mostly informal", "value": "c", "score": 3 },
+      { "text": "None — nothing is formally documented", "value": "d", "score": 0, "branchTo": "a6" }
+    ]
+  },
+  {
+    "id": "a2",
+    "text": "What AI or automation tools are you currently using?",
+    "category": "ai",
+    "type": "single",
+    "weight": 2,
+    "options": [
+      { "text": "Multiple tools integrated into workflows (e.g., Zapier, Make, ChatGPT, etc.)", "value": "a", "score": 10 },
+      { "text": "A few tools but not deeply integrated", "value": "b", "score": 6 },
+      { "text": "Experimenting with 1-2 tools casually", "value": "c", "score": 3 },
+      { "text": "None — we haven't started with AI or automation", "value": "d", "score": 0 }
+    ]
+  },
+  {
+    "id": "a3",
+    "text": "How clean and organized is the data your business generates?",
+    "category": "ai",
+    "type": "single",
+    "weight": 3,
+    "options": [
+      { "text": "Very clean — structured, accessible, regularly maintained", "value": "a", "score": 10 },
+      { "text": "Mostly clean with some inconsistencies", "value": "b", "score": 6 },
+      { "text": "Messy — data is scattered across multiple tools", "value": "c", "score": 2 },
+      { "text": "No organized data systems at all", "value": "d", "score": 0 }
+    ]
+  },
+  {
+    "id": "a4",
+    "text": "How much of your time is spent on repetitive, manual tasks?",
+    "category": "ai",
+    "type": "single",
+    "weight": 2,
+    "options": [
+      { "text": "Very little — most routine tasks are automated", "value": "a", "score": 10 },
+      { "text": "Some — we've automated parts but plenty remains", "value": "b", "score": 6 },
+      { "text": "A lot — most of our work is manual and repetitive", "value": "c", "score": 3 },
+      { "text": "Nearly all — we operate almost entirely manually", "value": "d", "score": 1 }
+    ]
+  },
+  {
+    "id": "a5",
+    "text": "What are your scaling goals for the next 12 months?",
+    "category": "ai",
+    "type": "single",
+    "weight": 2,
+    "options": [
+      { "text": "Aggressive growth — 2x or more in revenue or reach", "value": "a", "score": 10 },
+      { "text": "Steady growth — 25-50% increase", "value": "b", "score": 7 },
+      { "text": "Maintain current level while improving efficiency", "value": "c", "score": 4 },
+      { "text": "Still defining our goals", "value": "d", "score": 1 }
+    ]
+  },
+  {
+    "id": "a6",
+    "text": "What is your biggest perceived barrier to using AI in your business?",
+    "category": "ai",
+    "type": "single",
+    "weight": 2,
+    "options": [
+      { "text": "Cost — AI tools seem expensive", "value": "a", "score": 4 },
+      { "text": "Knowledge — I don't know where to start", "value": "b", "score": 4 },
+      { "text": "Trust — I'm not sure AI will work for my business", "value": "c", "score": 3 },
+      { "text": "No barrier — I'm ready to implement AI now", "value": "d", "score": 10 }
+    ]
+  }
+]
