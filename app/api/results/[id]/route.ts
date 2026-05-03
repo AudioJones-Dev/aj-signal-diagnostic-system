@@ -3,9 +3,10 @@ import { getResult } from '@/lib/store';
 
 export async function GET(
   _request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  const result = await getResult(params.id);
+  const { id } = await params;
+  const result = await getResult(id);
   if (!result) {
     return NextResponse.json({ error: 'Result not found' }, { status: 404 });
   }
