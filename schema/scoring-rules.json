@@ -1,0 +1,51 @@
+[
+  {
+    "id": "rule_strategy",
+    "resultType": "strategy_misalignment",
+    "priority": 1,
+    "conditions": [
+      { "category": "strategy", "operator": "lt", "threshold": 40 }
+    ]
+  },
+  {
+    "id": "rule_brand",
+    "resultType": "brand_misalignment",
+    "priority": 2,
+    "conditions": [
+      { "category": "branding", "operator": "lt", "threshold": 40 },
+      { "category": "strategy", "operator": "gte", "threshold": 40 }
+    ]
+  },
+  {
+    "id": "rule_marketing",
+    "resultType": "marketing_gap",
+    "priority": 3,
+    "conditions": [
+      { "category": "marketing", "operator": "lt", "threshold": 40 },
+      { "category": "strategy", "operator": "gte", "threshold": 40 },
+      { "category": "branding", "operator": "gte", "threshold": 40 }
+    ]
+  },
+  {
+    "id": "rule_ai_readiness",
+    "resultType": "ai_readiness_gap",
+    "priority": 4,
+    "conditions": [
+      { "category": "ai", "operator": "lt", "threshold": 50 },
+      { "category": "strategy", "operator": "gte", "threshold": 40 },
+      { "category": "branding", "operator": "gte", "threshold": 40 },
+      { "category": "marketing", "operator": "gte", "threshold": 40 }
+    ]
+  },
+  {
+    "id": "rule_ai_scaling",
+    "resultType": "ai_scaling_candidate",
+    "priority": 5,
+    "conditions": [
+      { "category": "strategy", "operator": "gte", "threshold": 60 },
+      { "category": "branding", "operator": "gte", "threshold": 60 },
+      { "category": "marketing", "operator": "gte", "threshold": 60 },
+      { "category": "ai", "operator": "gte", "threshold": 50 }
+    ]
+  }
+]
