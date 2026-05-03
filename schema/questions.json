@@ -183,15 +183,15 @@
   },
   {
     "id": "a1",
-    "text": "How would you rate the level of documentation of your business processes?",
+    "text": "Are your business processes documented at a step-by-step level that could be handed off to a tool or assistant without additional explanation?",
     "category": "ai",
     "type": "single",
     "weight": 3,
     "options": [
-      { "text": "Excellent — everything is documented and up to date", "value": "a", "score": 10 },
-      { "text": "Good — most things documented, some gaps", "value": "b", "score": 7 },
-      { "text": "Poor — some documentation but mostly informal", "value": "c", "score": 3 },
-      { "text": "None — nothing is formally documented", "value": "d", "score": 0, "branchTo": "a6" }
+      { "text": "Yes — every key process has a step-by-step workflow or decision tree", "value": "a", "score": 10 },
+      { "text": "Mostly — major workflows are mapped, minor ones aren't", "value": "b", "score": 7 },
+      { "text": "Partially — some workflows exist but rely heavily on tribal knowledge", "value": "c", "score": 3 },
+      { "text": "No — processes live in people's heads and would need to be rebuilt from scratch", "value": "d", "score": 0, "branchTo": "a6" }
     ]
   },
   {

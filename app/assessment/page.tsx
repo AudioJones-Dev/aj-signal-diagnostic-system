@@ -6,7 +6,6 @@ import { ProgressBar } from '@/components/ui/ProgressBar';
 import { QuestionCard } from '@/components/assessment/QuestionCard';
 import { LeadCaptureForm } from '@/components/assessment/LeadCaptureForm';
 import { getNextQuestion, getVisibleQuestions } from '@/lib/decision-engine';
-import { calculateCategoryScores } from '@/lib/scoring';
 import type { Answer, Question } from '@/lib/types';
 import questionsData from '@/schema/questions.json';
 import Link from 'next/link';
@@ -69,11 +68,10 @@ export default function AssessmentPage() {
   const handleLeadSubmit = async (name: string, email: string) => {
     setIsSubmitting(true);
     try {
-      const categoryScores = calculateCategoryScores(answers, allQuestions);
       const response = await fetch('/api/assessment/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ answers, categoryScores, leadName: name, leadEmail: email }),
+        body: JSON.stringify({ answers, leadName: name, leadEmail: email }),
       });
 
       if (!response.ok) throw new Error('Submission failed');

@@ -2,17 +2,24 @@ import { NextRequest, NextResponse } from 'next/server';
 import { nanoid } from 'nanoid';
 import { saveSession, saveResult } from '@/lib/store';
 import { buildDiagnosticResult } from '@/lib/result-router';
-import type { Answer, AssessmentSession, CategoryScore } from '@/lib/types';
+import { calculateCategoryScores } from '@/lib/scoring';
+import type { Answer, AssessmentSession } from '@/lib/types';
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { answers, categoryScores, leadName, leadEmail } = body as {
+    const { answers, leadName, leadEmail } = body as {
       answers: Answer[];
-      categoryScores: CategoryScore[];
       leadName: string;
       leadEmail: string;
     };
+
+    if (!Array.isArray(answers) || !leadEmail || !leadName) {
+      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
+    }
+
+    // Always recalculate scores server-side — never trust client-submitted scores
+    const categoryScores = calculateCategoryScores(answers);
 
     const sessionId = nanoid();
     const session: AssessmentSession = {

@@ -3,7 +3,8 @@
 import { useEffect, useState } from 'react';
 import { ResultType } from '@/lib/types';
 
-// Note: Add authentication before deploying to production.
+// This page fetches from /api/admin/submissions which is protected by ADMIN_SECRET bearer token
+// when the env var is set. Add a proper auth provider (NextAuth, Clerk) before production.
 
 interface Submission {
   id: string;

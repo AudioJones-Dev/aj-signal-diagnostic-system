@@ -1,8 +1,20 @@
-// Note: This route has no authentication. Add auth middleware before deploying to production.
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { getAllSessions, getAllResults } from '@/lib/store';
 
-export async function GET() {
+// TODO: Replace with a proper authentication provider (e.g. NextAuth, Clerk) before production.
+// Set ADMIN_SECRET in your environment to enable bearer-token protection.
+function isAuthorized(request: NextRequest): boolean {
+  const secret = process.env.ADMIN_SECRET;
+  if (!secret) return true; // No secret configured → open in local dev
+  const auth = request.headers.get('authorization') ?? '';
+  return auth === `Bearer ${secret}`;
+}
+
+export async function GET(request: NextRequest) {
+  if (!isAuthorized(request)) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
   const [sessions, results] = await Promise.all([getAllSessions(), getAllResults()]);
 
   const submissions = sessions.map((session) => {
