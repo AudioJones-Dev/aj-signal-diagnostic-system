@@ -1,0 +1,21 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Build / framework output
+.next/
+dist/
+build/
+
+# Test / coverage
+coverage/
+
+# OS / editor noise
+.DS_Store
+
+# Logs
+*.log
